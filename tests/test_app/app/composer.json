@@ -1,5 +1,5 @@
 {
-    "name": "connehito/cake-sentry-test-app",
+    "name": "ishan-biztech/cake-sentry-test-app",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -12,7 +12,7 @@
         "php": "^7.1",
         "cakephp/cakephp": "^3.6",
         "cakephp/plugin-installer": "^1.0",
-        "connehito/cake-sentry": "@dev"
+        "ishan-biztech/cake-sentry": "@dev"
     },
     "require-dev": {
         "cakephp/bake": "@stable",

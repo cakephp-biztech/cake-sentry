@@ -1,6 +1,6 @@
 <?php
 
-namespace Connehito\CakeSentry\Error\Middleware;
+namespace Biztech\CakeSentry\Error\Middleware;
 
 use Cake\Error\Middleware\ErrorHandlerMiddleware as BaseErrorHandlerMiddleware;
 use Cake\Log\Log;

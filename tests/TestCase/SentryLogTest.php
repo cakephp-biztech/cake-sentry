@@ -1,10 +1,10 @@
 <?php
 
-namespace Connehito\CakeSentry\Test\TestCase;
+namespace Biztech\CakeSentry\Test\TestCase;
 
 use Cake\Core\Configure;
-use Connehito\CakeSentry\Http\Client;
-use Connehito\CakeSentry\Log\Engine\SentryLog;
+use Biztech\CakeSentry\Http\Client;
+use Biztech\CakeSentry\Log\Engine\SentryLog;
 use PHPUnit\Framework\TestCase;
 use ReflectionProperty;
 

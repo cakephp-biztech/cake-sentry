@@ -1,10 +1,10 @@
 <?php
 
-namespace Connehito\CakeSentry;
+namespace Biztech\CakeSentry;
 
+use Biztech\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Core\BasePlugin;
 use Cake\Error\Middleware\ErrorHandlerMiddleware as CakeErrorHandlerMiddleware;
-use Connehito\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
 
 class Plugin extends BasePlugin
 {

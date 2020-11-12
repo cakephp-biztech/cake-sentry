@@ -1,12 +1,12 @@
 <?php
 
-namespace Connehito\CakeSentry\Test\TestCase;
+namespace Biztech\CakeSentry\Test\TestCase;
 
 use Cake\Error\Middleware\ErrorHandlerMiddleware as CakeErrorHandlerMiddleware;
 use Cake\Http\MiddlewareQueue;
 use Cake\TestSuite\TestCase;
-use Connehito\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
-use Connehito\CakeSentry\Plugin;
+use Biztech\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
+use Biztech\CakeSentry\Plugin;
 
 final class PluginTest extends TestCase
 {

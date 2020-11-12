@@ -1,6 +1,6 @@
 <?php
 
-namespace Connehito\CakeSentry\Test\TestCase\Http;
+namespace Biztech\CakeSentry\Test\TestCase\Http;
 
 use Cake\Core\Configure;
 use Cake\Event\Event;
@@ -8,7 +8,7 @@ use Cake\Event\EventManager;
 use Cake\Http\Exception\NotFoundException;
 use Cake\TestSuite\TestCase;
 use Closure;
-use Connehito\CakeSentry\Http\Client;
+use Biztech\CakeSentry\Http\Client;
 use Exception;
 use Prophecy\Argument;
 use ReflectionProperty;

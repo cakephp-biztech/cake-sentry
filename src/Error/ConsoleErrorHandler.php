@@ -1,5 +1,5 @@
 <?php
-namespace Connehito\CakeSentry\Error;
+namespace Biztech\CakeSentry\Error;
 
 use Cake\Console\ConsoleErrorHandler as CakeConsoleErrorHandler;
 

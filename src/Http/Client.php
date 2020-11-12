@@ -1,6 +1,6 @@
 <?php
 
-namespace Connehito\CakeSentry\Http;
+namespace Biztech\CakeSentry\Http;
 
 use Cake\Core\Configure;
 use Cake\Core\InstanceConfigTrait;

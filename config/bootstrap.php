@@ -1,11 +1,11 @@
 <?php
-namespace Connehito\CakeSentry;
+namespace Biztech\CakeSentry;
 
 use Cake\Core\Configure;
 use Cake\Log\Log;
-use Connehito\CakeSentry\Error\ConsoleErrorHandler;
-use Connehito\CakeSentry\Error\ErrorHandler;
-use Connehito\CakeSentry\Log\Engine\SentryLog;
+use Biztech\CakeSentry\Error\ConsoleErrorHandler;
+use Biztech\CakeSentry\Error\ErrorHandler;
+use Biztech\CakeSentry\Log\Engine\SentryLog;
 
 $isCli = PHP_SAPI === 'cli';
 if (!$isCli && strpos((env('argv')[0] ?? ''), '/phpunit') !== false) {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Connehito\CakeSentry\Test\TestCase\Error;
+namespace Biztech\CakeSentry\Test\TestCase\Error;
 
 use Cake\Log\Log;
 use Cake\TestSuite\TestCase;
-use Connehito\CakeSentry\Error\SentryErrorHandlerTrait;
+use Biztech\CakeSentry\Error\SentryErrorHandlerTrait;
 use ErrorException;
 use Exception;
 use PHPUnit_Framework_MockObject_MockObject;

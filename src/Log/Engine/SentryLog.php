@@ -1,9 +1,9 @@
 <?php
 
-namespace Connehito\CakeSentry\Log\Engine;
+namespace Biztech\CakeSentry\Log\Engine;
 
+use Biztech\CakeSentry\Http\Client;
 use Cake\Log\Engine\BaseLog;
-use Connehito\CakeSentry\Http\Client;
 
 class SentryLog extends BaseLog
 {

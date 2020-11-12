@@ -1,5 +1,5 @@
 {
-    "name": "connehito/cake-sentry",
+    "name": "ishan-biztech/cake-sentry",
     "description": "Sentry plugin for CakePHP3",
     "type": "cakephp-plugin",
     "require": {
@@ -17,12 +17,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Connehito\\CakeSentry\\": "src/"
+            "Biztech\\CakeSentry\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Connehito\\CakeSentry\\Test\\": "tests/"
+            "Biztech\\CakeSentry\\Test\\": "tests/"
         }
     },
     "scripts": {
@@ -31,12 +31,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "authors": [
-        {
-            "name": "Hideki Kinjyo",
-            "email": "dev@o0h.in",
-            "role": "Maintainer"
-        }
-    ]
+    }
 }

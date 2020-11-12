@@ -1,11 +1,11 @@
 <?php
 
-namespace Connehito\CakeSentry\Error;
+namespace Biztech\CakeSentry\Error;
 
+use Biztech\CakeSentry\Http\Client;
 use Cake\Core\InstanceConfigTrait;
 use Cake\Error\PHP7ErrorException;
 use Cake\Log\Log;
-use Connehito\CakeSentry\Http\Client;
 use ErrorException;
 use Exception;
 

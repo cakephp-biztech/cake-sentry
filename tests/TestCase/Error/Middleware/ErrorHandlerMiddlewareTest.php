@@ -1,13 +1,13 @@
 <?php
 
-namespace Connehito\CakeSentry\Test\TestCase\Error\Middleware;
+namespace Biztech\CakeSentry\Test\TestCase\Error\Middleware;
 
 use Cake\Core\Configure;
 use Cake\Http\Response;
 use Cake\Http\ServerRequestFactory;
 use Cake\Log\Log;
 use Cake\TestSuite\TestCase;
-use Connehito\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
+use Biztech\CakeSentry\Error\Middleware\ErrorHandlerMiddleware;
 use PHPUnit_Framework_MockObject_MockObject;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
