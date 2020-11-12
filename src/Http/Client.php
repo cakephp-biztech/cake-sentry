@@ -64,7 +64,9 @@ class Client
         $event = new Event('CakeSentry.Client.beforeCapture', $this, $context);
         $this->getEventManager()->dispatch($event);
 
+        $lastEventId = '';
         $exception = Hash::get($context, 'exception');
+
         if ($exception) {
             if ($exception instanceof PHP7ErrorException) {
                 $exception = $exception->getError();
@@ -89,7 +91,12 @@ class Client
             } else {
                 $severity = Severity::fromError($level);
             }
-            $lastEventId = $this->hub->captureMessage($message, $severity);
+
+            try {
+                $lastEventId = $this->hub->captureMessage($message, $severity);
+            } catch (\Sentry\Exception\JsonException $e) {
+                // Do nothing
+            }
         }
 
         $context['lastEventId'] = $lastEventId;
