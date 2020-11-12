@@ -1,12 +1,12 @@
 <?php
-namespace Connehito\CakeSentry;
+namespace Biztech\CakeSentry;
 
 use Cake\Core\Configure;
 use Cake\Log\Log;
-use Connehito\CakeSentry\Error\ConsoleErrorHandler;
-use Connehito\CakeSentry\Error\ErrorHandler;
-use Connehito\CakeSentry\Error\ErrorLogger;
-use Connehito\CakeSentry\Log\Engine\SentryLog;
+use Biztech\CakeSentry\Error\ConsoleErrorHandler;
+use Biztech\CakeSentry\Error\ErrorHandler;
+use Biztech\CakeSentry\Error\ErrorLogger;
+use Biztech\CakeSentry\Log\Engine\SentryLog;
 
 $errorLogConfig = Log::getConfig('error');
 $errorLogConfig['className'] = SentryLog::class;

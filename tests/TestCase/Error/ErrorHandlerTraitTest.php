@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Connehito\CakeSentry\Test\TestCase\Error;
+namespace Biztech\CakeSentry\Test\TestCase\Error;
 
+use Biztech\CakeSentry\Error\ErrorHandlerTrait;
 use Cake\Error\ErrorHandler;
 use Cake\TestSuite\TestCase;
-use Connehito\CakeSentry\Error\ErrorHandlerTrait;
 use ErrorException;
 use Psr\Http\Message\ServerRequestInterface;
 use Throwable;

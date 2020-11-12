@@ -1,9 +1,9 @@
 <?php
 
-namespace Connehito\CakeSentry\Error;
+namespace Biztech\CakeSentry\Error;
 
+use Biztech\CakeSentry\Http\Client;
 use Cake\Core\InstanceConfigTrait;
-use Connehito\CakeSentry\Http\Client;
 use ErrorException;
 
 trait ErrorHandlerTrait

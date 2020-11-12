@@ -1,6 +1,6 @@
 <?php
 
-namespace Connehito\CakeSentry;
+namespace Biztech\CakeSentry;
 
 use Cake\Core\BasePlugin;
 

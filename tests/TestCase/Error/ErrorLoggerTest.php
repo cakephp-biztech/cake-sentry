@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Connehito\CakeSentry\Test\TestCase\Error;
+namespace Biztech\CakeSentry\Test\TestCase\Error;
 
+use Biztech\CakeSentry\Error\ErrorLogger;
 use Cake\Core\Configure;
 use Cake\Http\ServerRequest;
 use Cake\Http\ServerRequestFactory;
 use Cake\Log\Log;
 use Cake\TestSuite\TestCase;
-use Connehito\CakeSentry\Error\ErrorLogger;
 use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 use RuntimeException;

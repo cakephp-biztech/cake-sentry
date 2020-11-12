@@ -18,7 +18,7 @@ CakePHP integration for Sentry.
 ## Installation
 ### With composer install.
 ```
-composer require connehito/cake-sentry:^3.0
+composer require ishan-biztech/cake-sentry:^3.0
 ```
 
 ## Usage
@@ -41,25 +41,25 @@ public function bootstrap()
 {
     parent::bootstrap();
 
-    $this->addPlugin(\Connehito\CakeSentry\Plugin::class);
+    $this->addPlugin(\Biztech\CakeSentry\Plugin::class);
 }
 ```
 
 Or use cake command.
 ```
-bin/cake plugin load Connehito/CakeSentry
+bin/cake plugin load Biztech/CakeSentry
 ```
 
 That's all! :tada:
 
-NOTE:  
-If the events(error/exception) don't be captured in Sentry, try changing the order in which the plugins are loaded.  
+NOTE:
+If the events(error/exception) don't be captured in Sentry, try changing the order in which the plugins are loaded.
 It is recommended to load this plugin after running `BaseApplication::bootstrap()` and loading other plugins.
 
 ### Advanced Usage
 
 #### Ignore noisy exceptions
-You can filter out exceptions that make a fuss and harder to determine the issues to address(like PageNotFoundException)  
+You can filter out exceptions that make a fuss and harder to determine the issues to address(like PageNotFoundException)
 Set exceptions not to log in `Error.skipLog`.
 
 ex)
@@ -74,15 +74,15 @@ ex)
 ]
 ```
 
-ref: CakePHP Cookbook  
+ref: CakePHP Cookbook
 https://book.cakephp.org/4/en/development/errors.html#error-exception-configuration
 
 ### Set Options
-All configure written in `Configure::write('Sentry')` will be passed to `Sentry\init()`.  
+All configure written in `Configure::write('Sentry')` will be passed to `Sentry\init()`.
 Please check Sentry's official document [about configuration](https://docs.sentry.io/error-reporting/configuration/?platform=php) and [about php-sdk's configuraion](https://docs.sentry.io/platforms/php/#php-specific-options).
 
-In addition to it, CakeSentry provides event hook to set dynamic values to options more easily if you need.  
-Client dispatch `CakeSentry.Client.afterSetup` event before sending error to sentry.   
+In addition to it, CakeSentry provides event hook to set dynamic values to options more easily if you need.
+Client dispatch `CakeSentry.Client.afterSetup` event before sending error to sentry.
 Subscribe the event with your logic.
 
 ex)
@@ -92,7 +92,7 @@ use Cake\Event\EventListenerInterface;
 
 class SentryOptionsContext implements EventListenerInterface
 {
-    public function implementedEvents(): array  
+    public function implementedEvents(): array
     {
         return [
             'CakeSentry.Client.afterSetup' => 'setServerContext',
@@ -118,9 +118,9 @@ And in `config/bootstrap.php`
 
 ### Send more context
 
-Client dispatch `CakeSentry.Client.beforeCapture` event before sending error to sentry.  
-You can set context with EventListener.With facade `sentryConfigureScope()` etc, or with `$event->getContext()->getHub()` to access and set context.  
-In case you want to handle the information in server request, cake-sentry supports to get `Request` instance in implemented event via `$event->getData('request')`.  
+Client dispatch `CakeSentry.Client.beforeCapture` event before sending error to sentry.
+You can set context with EventListener.With facade `sentryConfigureScope()` etc, or with `$event->getContext()->getHub()` to access and set context.
+In case you want to handle the information in server request, cake-sentry supports to get `Request` instance in implemented event via `$event->getData('request')`.
 
 See also [the section about context in offical doc](https://docs.sentry.io/enriching-error-data/context/?platform=php).
 
@@ -174,7 +174,7 @@ And in `config/bootstrap.php`
 ```
 
 ### Collecting User feedback
-In `CakeSentry.Client.afterCapture` event, you can get last event ID.  
+In `CakeSentry.Client.afterCapture` event, you can get last event ID.
 See also [offcial doc](https://docs.sentry.io/enriching-error-data/user-feedback/?platform=php#collecting-feedback).
 
 ex)
@@ -196,8 +196,8 @@ class SentryErrorContext implements EventListenerInterface
 ```
 
 ## Contributing
-Pull requests and feedback are very welcome :)  
-on GitHub at https://github.com/connehito/cake-sentry .
+Pull requests and feedback are very welcome :)
+on GitHub at https://github.com/ishan-biztech/cake-sentry
 
 ## License
-The plugin is available as open source under the terms of the [MIT License](https://github.com/Connehito/cake-sentry/blob/master/LICENSE).
+The plugin is available as open source under the terms of the [MIT License](LICENSE).
