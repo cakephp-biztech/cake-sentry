@@ -16,7 +16,7 @@ CakePHP integration for Sentry.
 ## Installation
 ### With composer install.
 ```
-composer require connehito/cake-sentry
+composer require ishan-biztech/cake-sentry
 ```
 
 ## Usage
@@ -39,13 +39,13 @@ public function bootstrap()
 {
     parent::bootstrap();
 
-    $this->addPlugin(\Connehito\CakeSentry\Plugin::class);
+    $this->addPlugin(\Biztech\CakeSentry\Plugin::class);
 }
 ```
 
 Or use cake command.
 ```
-bin/cake plugin load Connehito/CakeSentry --bootstrap
+bin/cake plugin load Biztech/CakeSentry --bootstrap
 ```
 
 That's all! :tada:
@@ -68,15 +68,15 @@ ex)
 ]
 ```
 
-ref: CakePHP Cookbook  
+ref: CakePHP Cookbook
 https://book.cakephp.org/3.0/en/development/errors.html#error-exception-configuration
 
 ### Set Options
-All configure written in `Configure::write('Sentry')` will be passed to `Sentry\init()`.  
+All configure written in `Configure::write('Sentry')` will be passed to `Sentry\init()`.
 Please check Sentry's official document [about configuration](https://docs.sentry.io/error-reporting/configuration/?platform=php) and [about php-sdk's configuraion](https://docs.sentry.io/platforms/php/#php-specific-options).
 
 In addition to it, CakeSentry provides event hook to set dynamic values to options more easily if you need.
-Client dispatch `CakeSentry.Client.afterSetup` event before sending error to sentry.  
+Client dispatch `CakeSentry.Client.afterSetup` event before sending error to sentry.
 Subscribe the event with your logic.
 
 ex)
@@ -112,7 +112,7 @@ EventManager::instance()->on(new SentryOptionsContext());
 
 ### Send more context
 
-Client dispatch `CakeSentry.Client.beforeCapture` event before sending error to sentry.  
+Client dispatch `CakeSentry.Client.beforeCapture` event before sending error to sentry.
 You can set context with EventListener.With facade `sentryConfigureScope()` etc, or with `$event->getContext()->getHub()` to access and set context.Calling Raven_Client's API or returning values, error context will be sent.
 Now, cake-sentry supports to get `Request` instance in implemented event via `$event->getSubject()->getRequest()`.
 See also [the section about context in offical doc](https://docs.sentry.io/enriching-error-data/context/?platform=php).
@@ -189,8 +189,8 @@ class SentryErrorContext implements EventListenerInterface
 ```
 
 ## Contributing
-Pull requests and feedback are very welcome :)  
-on GitHub at https://github.com/connehito/cake-sentry .
+Pull requests and feedback are very welcome :)
+on GitHub at https://github.com/ishan-biztech/cake-sentry
 
 ## License
-The plugin is available as open source under the terms of the [MIT License](https://github.com/Connehito/cake-sentry/blob/master/LICENSE).
+The plugin is available as open source under the terms of the [MIT License](LICENSE).
