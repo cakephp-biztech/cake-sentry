@@ -1,11 +1,12 @@
 # CakePHP Sentry Plugin
+
 CakePHP integration for Sentry.
 
-[![Latest Stable Version](https://poser.pugx.org/connehito/cake-sentry/v/stable)](https://packagist.org/packages/connehito/cake-sentry)
-[![Total Downloads](https://poser.pugx.org/connehito/cake-sentry/downloads)](https://packagist.org/packages/connehito/cake-sentry)
-[![Build Status](https://travis-ci.org/Connehito/cake-sentry.svg?branch=master)](https://travis-ci.org/Connehito/cake-sentry)
-[![codecov](https://codecov.io/gh/connehito/cake-sentry/branch/master/graph/badge.svg)](https://codecov.io/gh/connehito/cake-sentry)
-[![License](https://poser.pugx.org/connehito/cake-sentry/license)](https://packagist.org/packages/connehito/cake-sentry)
+[![Latest Stable Version](https://poser.pugx.org/cakephp-biztech/cake-sentry/v/stable)](https://packagist.org/packages/cakephp-biztech/cake-sentry)
+[![Total Downloads](https://poser.pugx.org/cakephp-biztech/cake-sentry/downloads)](https://packagist.org/packages/cakephp-biztech/cake-sentry)
+[![Build Status](https://travis-ci.org/cakephp-biztech/cake-sentry.svg?branch=master)](https://travis-ci.org/cakephp-biztech/cake-sentry)
+[![codecov](https://codecov.io/gh/cakephp-biztech/cake-sentry/branch/master/graph/badge.svg)](https://codecov.io/gh/cakephp-biztech/cake-sentry)
+[![License](https://poser.pugx.org/cakephp-biztech/cake-sentry/license)](https://packagist.org/packages/cakephp-biztech/cake-sentry)
 
 ## Requirements
 - PHP 7.1+
@@ -16,7 +17,7 @@ CakePHP integration for Sentry.
 ## Installation
 ### With composer install.
 ```
-composer require ishan-biztech/cake-sentry
+composer require cakephp-biztech/cake-sentry
 ```
 
 ## Usage
@@ -26,9 +27,9 @@ Write your sentry account info.
 ```php
 // in `config/app.php`
 return [
-  'Sentry' => [
-    'dsn' => YOUR_SENTRY_DSN_HERE
-  ]
+    'Sentry' => [
+        'dsn' => YOUR_SENTRY_DSN_HERE
+    ]
 ];
 ```
 
